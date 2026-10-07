@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TEMGUARD - Platform informasi mekanisme Xanthorrhizol dalam melumpuhkan biofilm bakteri, panduan penyimpanan suhu 4°C, dan batas kadaluwarsa.">
+    <meta name="keywords" content="Xanthorrhizol, Biofilm, Temulawak, TEMGUARD, Antibakteri, Penyimpanan 4C">
+    <meta name="author" content="TEMGUARD">
+    <title>TEMGUARD — Xanthorrhizol Biofilm Defense System</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="dna-helix">
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+            </div>
+            <div class="loader-text">
+                <span>T</span><span>E</span><span>M</span><span>G</span><span>U</span><span>A</span><span>R</span><span>D</span>
+            </div>
+            <p class="loader-subtitle">Initializing Biofilm Defense System...</p>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 20 C12 14, 20 8, 20 20 S28 26, 28 20" stroke="currentColor" stroke-width="2"
+                            fill="none" />
+                        <circle cx="20" cy="20" r="4" fill="currentColor" />
+                    </svg>
+                </div>
+                <span class="logo-text">TEMGUARD</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active" data-section="hero">Beranda</a>
+                <a href="#mechanism" class="nav-link" data-section="mechanism">Mekanisme</a>
+                <a href="#biofilm" class="nav-link" data-section="biofilm">Biofilm</a>
+                <a href="#storage" class="nav-link" data-section="storage">Penyimpanan</a>
+                <a href="#expiry" class="nav-link" data-section="expiry">Kadaluwarsa</a>
+                <a href="#research" class="nav-link" data-section="research">Riset</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="shield-check"></i>
+                <span>Biofilm Defense Technology</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line">Xanthorrhizol</span>
+                <span class="hero-title-accent">Biofilm Destroyer</span>
+            </h1>
+            <p class="hero-description">
+                Temukan mekanisme ilmiah bagaimana Xanthorrhizol dari <em>Curcuma xanthorrhiza</em> (Temulawak)
+                melumpuhkan pertahanan biofilm bakteri. TEMGUARD menyajikan informasi komprehensif tentang
+                mekanisme aksi, panduan penyimpanan, dan batas kadaluwarsa.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-card" data-aos="fade-up" data-delay="100">
+                    <div class="stat-icon"><i data-lucide="target"></i></div>
+                    <div class="stat-number" data-count="78.54">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Efektivitas Anti-Biofilm</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-delay="200">
+                    <div class="stat-icon"><i data-lucide="thermometer"></i></div>
+                    <div class="stat-number" data-count="4">0</div>
+                    <div class="stat-unit">°C</div>
+                    <div class="stat-label">Suhu Simpan Ideal</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-delay="300">
+                    <div class="stat-icon"><i data-lucide="flask-conical"></i></div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-unit">Mekanisme</div>
+                    <div class="stat-label">Jalur Aksi Utama</div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#mechanism" class="btn btn-primary">
+                    <i data-lucide="microscope"></i>
+                    <span>Pelajari Mekanisme</span>
+                </a>
+                <a href="#storage" class="btn btn-secondary">
+                    <i data-lucide="snowflake"></i>
+                    <span>Panduan Penyimpanan</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="molecule-viewer" id="molecule-viewer">
+                <canvas id="molecule-canvas"></canvas>
+                <div class="molecule-label">
+                    <span class="molecule-name">Xanthorrhizol</span>
+                    <span class="molecule-formula">C₁₅H₂₂O</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll ke bawah</span>
+        </div>
+    </section>
+
+    <!-- Mechanism Section -->
+    <section id="mechanism" class="section mechanism-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i data-lucide="atom"></i> Mekanisme Aksi</span>
+                <h2 class="section-title">Bagaimana Xanthorrhizol <br><span class="text-accent">Melumpuhkan
+                        Biofilm</span></h2>
+                <p class="section-desc">Xanthorrhizol bekerja melalui beberapa jalur mekanisme yang saling bersinergi
+                    untuk menghancurkan pertahanan biofilm bakteri secara menyeluruh.</p>
+            </div>
+
+            <!-- Interactive Mechanism Diagram -->
+            <div class="mechanism-diagram">
+                <div class="diagram-center">
+                    <div class="diagram-core">
+                        <i data-lucide="shield-alert"></i>
+                        <span>Xanthorrhizol</span>
+                    </div>
+                </div>
+                <div class="diagram-nodes">
+                    <div class="diagram-node node-1 active" data-mechanism="wall">
+                        <div class="node-icon"><i data-lucide="brick-wall"></i></div>
+                        <span>Dinding Sel</span>
+                    </div>
+                    <div class="diagram-node node-2" data-mechanism="membrane">
+                        <div class="node-icon"><i data-lucide="layers"></i></div>
+                        <span>Membran Sel</span>
+                    </div>
+                    <div class="diagram-node node-3" data-mechanism="enzyme">
+                        <div class="node-icon"><i data-lucide="dna"></i></div>
+                        <span>Enzim MurB</span>
+                    </div>
+                    <div class="diagram-node node-4" data-mechanism="adhesion">
+                        <div class="node-icon"><i data-lucide="unlink"></i></div>
+                        <span>Adhesi</span>
+                    </div>
+                    <div class="diagram-node node-5" data-mechanism="efflux">
+                        <div class="node-icon"><i data-lucide="rotate-ccw"></i></div>
+                        <span>Efflux Pump</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mechanism Detail Cards -->
+            <div class="mechanism-detail" id="mechanism-detail">
+                <div class="detail-card active" data-mechanism="wall">
+                    <div class="detail-header">
+                        <div class="detail-icon"><i data-lucide="brick-wall"></i></div>
+                        <div>
+                            <h3>Disrupsi Dinding Sel & Peptidoglikan</h3>
+                            <span class="detail-badge">Mekanisme Primer</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <p>Xanthorrhizol menyerang <strong>lapisan peptidoglikan</strong> — komponen struktural esensial
+                            dinding sel bakteri. Serangan ini meningkatkan permeabilitas membran secara drastis.</p>
+                        <div class="detail-steps">
+                            <div class="step">
+                                <div class="step-num">01</div>
+                                <div class="step-text">
+                                    <h4>Penetrasi Dinding Sel</h4>
+                                    <p>Xanthorrhizol berikatan dengan komponen peptidoglikan pada dinding sel bakteri.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">02</div>
+                                <div class="step-text">
+                                    <h4>Degradasi Struktural</h4>
+                                    <p>Ikatan silang peptidoglikan terganggu, melemahkan integritas struktural dinding
+                                        sel.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">03</div>
+                                <div class="step-text">
+                                    <h4>Kebocoran Seluler</h4>
+                                    <p>Protein, DNA, RNA, dan ATP bocor keluar sel, menyebabkan kematian sel bakteri.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card" data-mechanism="membrane">
+                    <div class="detail-header">
+                        <div class="detail-icon"><i data-lucide="layers"></i></div>
+                        <div>
+                            <h3>Gangguan Membran Sitoplasma</h3>
+                            <span class="detail-badge">Mekanisme Sekunder</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <p>Selain dinding sel, Xanthorrhizol juga menargetkan <strong>membran sitoplasma</strong>,
+                            menyebabkan depolarisasi dan gangguan fungsi vital sel.</p>
+                        <div class="detail-steps">
+                            <div class="step">
+                                <div class="step-num">01</div>
+                                <div class="step-text">
+                                    <h4>Insersi ke Lipid Bilayer</h4>
+                                    <p>Sifat hidrofobik xanthorrhizol memungkinkannya menyisip ke dalam membran lipid
+                                        bilayer.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">02</div>
+                                <div class="step-text">
+                                    <h4>Depolarisasi Membran</h4>
+                                    <p>Potensial membran terganggu, menghambat transport aktif dan produksi energi sel.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">03</div>
+                                <div class="step-text">
+                                    <h4>Lisis Sel</h4>
+                                    <p>Ketidakstabilan membran menyebabkan lisis osmotik dan kematian sel bakteri.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card" data-mechanism="enzyme">
+                    <div class="detail-header">
+                        <div class="detail-icon"><i data-lucide="dna"></i></div>
+                        <div>
+                            <h3>Inhibisi Enzim MurB</h3>
+                            <span class="detail-badge">Target Molekuler</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <p>Xanthorrhizol menginhibisi <strong>enzim MurB</strong> (UDP-N-acetylenolpyruvoylglucosamine
+                            reductase), enzim kritis dalam jalur biosintesis peptidoglikan.</p>
+                        <div class="detail-steps">
+                            <div class="step">
+                                <div class="step-num">01</div>
+                                <div class="step-text">
+                                    <h4>Pengikatan Kompetitif</h4>
+                                    <p>Xanthorrhizol berikatan dengan sisi aktif enzim MurB, memblokir substrat alami.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">02</div>
+                                <div class="step-text">
+                                    <h4>Blokade Biosintesis</h4>
+                                    <p>Jalur perakitan peptidoglikan terhenti, menghambat pembentukan dinding sel baru.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">03</div>
+                                <div class="step-text">
+                                    <h4>Selektivitas Tinggi</h4>
+                                    <p>Target ini sangat selektif — meminimalkan toksisitas terhadap sel inang manusia.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card" data-mechanism="adhesion">
+                    <div class="detail-header">
+                        <div class="detail-icon"><i data-lucide="unlink"></i></div>
+                        <div>
+                            <h3>Penghambatan Adhesi & Akumulasi</h3>
+                            <span class="detail-badge">Anti-Biofilm</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <p>Xanthorrhizol secara langsung menghambat fase <strong>adhesi dan akumulasi</strong> — dua
+                            tahap kritis dalam pembentukan biofilm bakteri.</p>
+                        <div class="detail-steps">
+                            <div class="step">
+                                <div class="step-num">01</div>
+                                <div class="step-text">
+                                    <h4>Blokade Adhesi Awal</h4>
+                                    <p>Mencegah bakteri menempel pada permukaan substrat (gigi, implan, dll).</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">02</div>
+                                <div class="step-text">
+                                    <h4>Inhibisi Ko-Agregasi</h4>
+                                    <p>Menghambat interaksi antar spesies bakteri yang diperlukan untuk membentuk
+                                        komunitas biofilm.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">03</div>
+                                <div class="step-text">
+                                    <h4>Dispersi Biofilm Matang</h4>
+                                    <p>Efek bergantung konsentrasi dan waktu — mampu mendispersi biofilm yang sudah
+                                        terbentuk.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card" data-mechanism="efflux">
+                    <div class="detail-header">
+                        <div class="detail-icon"><i data-lucide="rotate-ccw"></i></div>
+                        <div>
+                            <h3>Inhibisi Efflux Pump</h3>
+                            <span class="detail-badge">Anti-Resistensi</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <p>Xanthorrhizol menginhibisi <strong>efflux pump</strong> bakteri — mekanisme pertahanan yang
+                            memompa keluar antibiotik dari dalam sel bakteri.</p>
+                        <div class="detail-steps">
+                            <div class="step">
+                                <div class="step-num">01</div>
+                                <div class="step-text">
+                                    <h4>Blokade Pompa Efflux</h4>
+                                    <p>Xanthorrhizol memblokir transporter efflux, mencegah bakteri mengeluarkan senyawa
+                                        antimikroba.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">02</div>
+                                <div class="step-text">
+                                    <h4>Akumulasi Intraseluler</h4>
+                                    <p>Antibiotik terakumulasi di dalam sel bakteri pada konsentrasi lethal.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">03</div>
+                                <div class="step-text">
+                                    <h4>Sinergi dengan Antibiotik</h4>
+                                    <p>Meningkatkan efektivitas antibiotik konvensional terhadap bakteri resisten
+                                        seperti MRSA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biofilm Interactive Section -->
+    <section id="biofilm" class="section biofilm-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i data-lucide="bug"></i> Biofilm Bakteri</span>
+                <h2 class="section-title">Simulasi Interaktif <br><span class="text-accent">Destruksi Biofilm</span>
+                </h2>
+                <p class="section-desc">Lihat secara visual bagaimana xanthorrhizol menghancurkan lapisan biofilm
+                    bakteri tahap demi tahap.</p>
+            </div>
+
+            <!-- Interactive Biofilm Simulator -->
+            <div class="biofilm-simulator">
+                <div class="simulator-display">
+                    <canvas id="biofilm-canvas"></canvas>
+                    <div class="simulator-overlay">
+                        <div class="simulator-stage" id="simulator-stage">Tahap 1: Biofilm Utuh</div>
+                    </div>
+                </div>
+                <div class="simulator-controls">
+                    <div class="control-group">
+                        <label>Konsentrasi Xanthorrhizol</label>
+                        <input type="range" id="concentration-slider" min="0" max="100" value="0" class="custom-slider">
+                        <div class="slider-labels">
+                            <span>0 μg/mL</span>
+                            <span>50 μg/mL</span>
+                            <span>100 μg/mL</span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label>Waktu Paparan</label>
+                        <input type="range" id="time-slider" min="0" max="100" value="0" class="custom-slider">
+                        <div class="slider-labels">
+                            <span>0 jam</span>
+                            <span>12 jam</span>
+                            <span>24 jam</span>
+                        </div>
+                    </div>
+                    <button id="simulate-btn" class="btn btn-primary">
+                        <i data-lucide="play"></i>
+                        <span>Jalankan Simulasi</span>
+                    </button>
+                    <button id="reset-btn" class="btn btn-secondary">
+                        <i data-lucide="rotate-ccw"></i>
+                        <span>Reset</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Target Pathogens -->
+            <div class="pathogens-grid">
+                <h3 class="pathogens-title">Patogen Target Xanthorrhizol</h3>
+                <div class="pathogen-cards">
+                    <div class="pathogen-card">
+                        <div class="pathogen-icon">🦠</div>
+                        <h4><em>Streptococcus mutans</em></h4>
+                        <p>Penyebab utama karies gigi. Xanthorrhizol menghambat pembentukan biofilm pada permukaan gigi.
+                        </p>
+                        <div class="effectiveness-bar">
+                            <div class="eff-fill" data-width="95"></div>
+                            <span>95% efektif</span>
+                        </div>
+                    </div>
+                    <div class="pathogen-card">
+                        <div class="pathogen-icon">🔬</div>
+                        <h4><em>Staphylococcus aureus</em> (MRSA)</h4>
+                        <p>Bakteri resisten methicillin. Xanthorrhizol mengatasi resistensi melalui inhibisi efflux
+                            pump.</p>
+                        <div class="effectiveness-bar">
+                            <div class="eff-fill" data-width="89"></div>
+                            <span>89% efektif</span>
+                        </div>
+                    </div>
+                    <div class="pathogen-card">
+                        <div class="pathogen-icon">🧫</div>
+                        <h4><em>Fusobacterium nucleatum</em></h4>
+                        <p>Patogen periodontal. Xanthorrhizol mendisrupsi biofilm secara konsentrasi dan waktu-dependen.
+                        </p>
+                        <div class="effectiveness-bar">
+                            <div class="eff-fill" data-width="92"></div>
+                            <span>92% efektif</span>
+                        </div>
+                    </div>
+                    <div class="pathogen-card">
+                        <div class="pathogen-icon">🧬</div>
+                        <h4><em>Enterococcus faecalis</em></h4>
+                        <p>Ditemukan di saluran akar gigi terinfeksi. Xanthorrhizol efektif mengeliminasi biofilm
+                            endodontik.</p>
+                        <div class="effectiveness-bar">
+                            <div class="eff-fill" data-width="87"></div>
+                            <span>87% efektif</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storage Section -->
+    <section id="storage" class="section storage-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i data-lucide="thermometer-snowflake"></i> Panduan Penyimpanan</span>
+                <h2 class="section-title">Suhu Simpan Ideal <br><span class="text-accent temp-display">4°C</span></h2>
+                <p class="section-desc">Xanthorrhizol memerlukan kondisi penyimpanan yang tepat untuk mempertahankan
+                    aktivitas biologisnya secara optimal.</p>
+            </div>
+
+            <!-- Interactive Thermometer -->
+            <div class="storage-dashboard">
+                <div class="thermometer-widget">
+                    <div class="thermo-container">
+                        <div class="thermo-body">
+                            <div class="thermo-scale">
+                                <span class="scale-mark" data-temp="50">50°C</span>
+                                <span class="scale-mark" data-temp="40">40°C</span>
+                                <span class="scale-mark" data-temp="30">30°C</span>
+                                <span class="scale-mark" data-temp="25">25°C</span>
+                                <span class="scale-mark" data-temp="20">20°C</span>
+                                <span class="scale-mark" data-temp="10">10°C</span>
+                                <span class="scale-mark ideal" data-temp="4">4°C ★</span>
+                                <span class="scale-mark" data-temp="0">0°C</span>
+                                <span class="scale-mark" data-temp="-10">-10°C</span>
+                                <span class="scale-mark" data-temp="-20">-20°C</span>
+                            </div>
+                            <div class="thermo-mercury" id="thermo-mercury">
+                                <div class="thermo-glow"></div>
+                            </div>
+                            <div class="thermo-ideal-zone"></div>
+                        </div>
+                        <div class="thermo-bulb">
+                            <div class="thermo-bulb-inner" id="thermo-bulb"></div>
+                        </div>
+                    </div>
+                    <div class="temp-readout">
+                        <div class="temp-current" id="temp-current">4°C</div>
+                        <div class="temp-status" id="temp-status">
+                            <i data-lucide="check-circle"></i>
+                            <span>OPTIMAL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage Guidelines -->
+                <div class="storage-info">
+                    <div class="info-card ideal">
+                        <div class="info-card-header">
+                            <div class="info-icon ideal"><i data-lucide="check-circle-2"></i></div>
+                            <h3>Suhu Ideal: 2°C – 8°C</h3>
+                        </div>
+                        <ul class="info-list">
+                            <li><i data-lucide="check"></i> Simpan pada suhu lemari es standar (4°C ± 2°C)</li>
+                            <li><i data-lucide="check"></i> Aktivitas biologis terjaga hingga 100%</li>
+                            <li><i data-lucide="check"></i> Stabilitas senyawa optimal</li>
+                            <li><i data-lucide="check"></i> Hindari fluktuasi suhu berulang</li>
+                        </ul>
+                    </div>
+                    <div class="info-card warning">
+                        <div class="info-card-header">
+                            <div class="info-icon warning"><i data-lucide="alert-triangle"></i></div>
+                            <h3>Suhu Ruang: 20°C – 30°C</h3>
+                        </div>
+                        <ul class="info-list">
+                            <li><i data-lucide="alert-circle"></i> Degradasi bertahap dimulai setelah 48 jam</li>
+                            <li><i data-lucide="alert-circle"></i> Aktivitas menurun 15-25% per minggu</li>
+                            <li><i data-lucide="alert-circle"></i> Hanya untuk penggunaan jangka pendek</li>
+                            <li><i data-lucide="alert-circle"></i> Jauhkan dari cahaya matahari langsung</li>
+                        </ul>
+                    </div>
+                    <div class="info-card danger">
+                        <div class="info-card-header">
+                            <div class="info-icon danger"><i data-lucide="x-circle"></i></div>
+                            <h3>Suhu Tinggi: > 30°C</h3>
+                        </div>
+                        <ul class="info-list">
+                            <li><i data-lucide="x"></i> Dekomposisi cepat senyawa aktif</li>
+                            <li><i data-lucide="x"></i> Kehilangan aktivitas >50% dalam 24 jam</li>
+                            <li><i data-lucide="x"></i> Perubahan warna dan bau menandakan kerusakan</li>
+                            <li><i data-lucide="x"></i> TIDAK BOLEH digunakan setelah paparan suhu tinggi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Storage Best Practices -->
+            <div class="best-practices">
+                <h3>Praktik Terbaik Penyimpanan</h3>
+                <div class="practices-grid">
+                    <div class="practice-item">
+                        <div class="practice-icon"><i data-lucide="package"></i></div>
+                        <h4>Wadah Tertutup Rapat</h4>
+                        <p>Gunakan wadah kedap udara berwarna gelap untuk mencegah oksidasi dan degradasi oleh cahaya.
+                        </p>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon"><i data-lucide="droplets"></i></div>
+                        <h4>Kelembaban Terkontrol</h4>
+                        <p>Jaga kelembaban relatif di bawah 60% untuk mencegah hidrolisis dan kontaminasi mikroba.</p>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon"><i data-lucide="sun-dim"></i></div>
+                        <h4>Lindungi dari Cahaya</h4>
+                        <p>UV dan cahaya tampak mempercepat degradasi. Simpan di tempat gelap atau wadah buram.</p>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon"><i data-lucide="clipboard-check"></i></div>
+                        <h4>Label & Dokumentasi</h4>
+                        <p>Catat tanggal penerimaan, pembukaan, dan tanggal kadaluwarsa pada setiap wadah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expiry Section -->
+    <section id="expiry" class="section expiry-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i data-lucide="calendar-clock"></i> Batas Kadaluwarsa</span>
+                <h2 class="section-title">Masa Simpan & <br><span class="text-accent">Kadaluwarsa</span></h2>
+                <p class="section-desc">Pantau dan kelola batas kadaluwarsa produk Xanthorrhizol Anda dengan kalkulator
+                    interaktif.</p>
+            </div>
+
+            <!-- Expiry Calculator -->
+            <div class="expiry-dashboard">
+                <div class="calculator-card">
+                    <h3><i data-lucide="calculator"></i> Kalkulator Kadaluwarsa</h3>
+                    <div class="calc-form">
+                        <div class="form-group">
+                            <label for="production-date">Tanggal Produksi</label>
+                            <input type="date" id="production-date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="storage-temp">Suhu Penyimpanan</label>
+                            <select id="storage-temp" class="form-input">
+                                <option value="4">4°C (Refrigerasi — Ideal)</option>
+                                <option value="25">25°C (Suhu Ruang)</option>
+                                <option value="37">37°C (Suhu Tubuh)</option>
+                                <option value="45">45°C (Suhu Tinggi)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="container-type">Jenis Wadah</label>
+                            <select id="container-type" class="form-input">
+                                <option value="amber">Botol Kaca Amber (Terbaik)</option>
+                                <option value="clear">Botol Kaca Bening</option>
+                                <option value="plastic">Wadah Plastik HDPE</option>
+                                <option value="open">Wadah Terbuka</option>
+                            </select>
+                        </div>
+                        <button id="calculate-expiry" class="btn btn-primary full-width">
+                            <i data-lucide="calculator"></i>
+                            <span>Hitung Kadaluwarsa</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-card" id="expiry-result" style="display:none;">
+                    <h3><i data-lucide="calendar-check"></i> Hasil Perhitungan</h3>
+                    <div class="result-content">
+                        <div class="result-main">
+                            <div class="result-date" id="result-date">—</div>
+                            <div class="result-label">Tanggal Kadaluwarsa</div>
+                        </div>
+                        <div class="result-details">
+                            <div class="result-item">
+                                <span class="result-key">Masa Simpan</span>
+                                <span class="result-value" id="result-shelf-life">—</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-key">Sisa Waktu</span>
+                                <span class="result-value" id="result-remaining">—</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-key">Status</span>
+                                <span class="result-value" id="result-status">—</span>
+                            </div>
+                        </div>
+                        <div class="result-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="progress-labels">
+                                <span>Produksi</span>
+                                <span>Kadaluwarsa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expiry Timeline -->
+            <div class="expiry-timeline">
+                <h3>Timeline Degradasi Berdasarkan Suhu</h3>
+                <div class="timeline-chart">
+                    <div class="chart-container">
+                        <canvas id="degradation-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Signs -->
+            <div class="warning-signs">
+                <h3>Tanda-Tanda Produk Kadaluwarsa</h3>
+                <div class="signs-grid">
+                    <div class="sign-card">
+                        <div class="sign-icon">🎨</div>
+                        <h4>Perubahan Warna</h4>
+                        <p>Warna berubah dari kuning kecokelatan menjadi gelap/kehitaman menandakan oksidasi dan
+                            degradasi senyawa aktif.</p>
+                    </div>
+                    <div class="sign-card">
+                        <div class="sign-icon">👃</div>
+                        <h4>Perubahan Bau</h4>
+                        <p>Bau khas temulawak memudar atau berubah menjadi bau tengik/asam menandakan dekomposisi kimia.
+                        </p>
+                    </div>
+                    <div class="sign-card">
+                        <div class="sign-icon">💧</div>
+                        <h4>Perubahan Tekstur</h4>
+                        <p>Munculnya endapan, kekeruhan, atau pemisahan fase menunjukkan instabilitas formulasi.</p>
+                    </div>
+                    <div class="sign-card">
+                        <div class="sign-icon">📉</div>
+                        <h4>Penurunan Efektivitas</h4>
+                        <p>Tidak menunjukkan efek antimikroba yang diharapkan pada konsentrasi yang sebelumnya efektif.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section research-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i data-lucide="book-open"></i> Data Riset</span>
+                <h2 class="section-title">Bukti Ilmiah & <br><span class="text-accent">Referensi Riset</span></h2>
+                <p class="section-desc">Data berbasis bukti dari jurnal ilmiah internasional tentang efikasi
+                    Xanthorrhizol.</p>
+            </div>
+
+            <!-- Research Stats Dashboard -->
+            <div class="research-dashboard">
+                <div class="research-stat-card">
+                    <div class="rs-icon"><i data-lucide="file-text"></i></div>
+                    <div class="rs-number" data-count="150">0</div>
+                    <div class="rs-label">Publikasi Ilmiah</div>
+                </div>
+                <div class="research-stat-card">
+                    <div class="rs-icon"><i data-lucide="globe"></i></div>
+                    <div class="rs-number" data-count="23">0</div>
+                    <div class="rs-label">Negara Peneliti</div>
+                </div>
+                <div class="research-stat-card">
+                    <div class="rs-icon"><i data-lucide="test-tubes"></i></div>
+                    <div class="rs-number" data-count="47">0</div>
+                    <div class="rs-label">Uji Klinis</div>
+                </div>
+                <div class="research-stat-card">
+                    <div class="rs-icon"><i data-lucide="award"></i></div>
+                    <div class="rs-number" data-count="12">0</div>
+                    <div class="rs-label">Paten Terdaftar</div>
+                </div>
+            </div>
+
+            <!-- Key Papers -->
+            <div class="papers-section">
+                <h3>Referensi Utama</h3>
+                <div class="paper-list">
+                    <div class="paper-item">
+                        <div class="paper-year">2024</div>
+                        <div class="paper-content">
+                            <h4>Xanthorrhizol targets MurB enzyme in peptidoglycan assembly pathway</h4>
+                            <p class="paper-authors">ResearchGate — Mechanism of Action Study</p>
+                            <div class="paper-tags">
+                                <span class="tag">Enzim MurB</span>
+                                <span class="tag">Peptidoglikan</span>
+                                <span class="tag">Selektivitas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-item">
+                        <div class="paper-year">2023</div>
+                        <div class="paper-content">
+                            <h4>Antibiofilm activity of Xanthorrhizol against S. mutans oral biofilm</h4>
+                            <p class="paper-authors">NIH/PubMed — In Vitro Study</p>
+                            <div class="paper-tags">
+                                <span class="tag">S. mutans</span>
+                                <span class="tag">Oral Biofilm</span>
+                                <span class="tag">In Vitro</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-item">
+                        <div class="paper-year">2023</div>
+                        <div class="paper-content">
+                            <h4>Efflux pump inhibition and anti-MRSA activity of Curcuma xanthorrhiza</h4>
+                            <p class="paper-authors">Walailak University — Resistance Study</p>
+                            <div class="paper-tags">
+                                <span class="tag">MRSA</span>
+                                <span class="tag">Efflux Pump</span>
+                                <span class="tag">Anti-Resistensi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-item">
+                        <div class="paper-year">2022</div>
+                        <div class="paper-content">
+                            <h4>Disruption of cell wall integrity and membrane depolarization by Xanthorrhizol</h4>
+                            <p class="paper-authors">Frontiers in Microbiology</p>
+                            <div class="paper-tags">
+                                <span class="tag">Dinding Sel</span>
+                                <span class="tag">Membran</span>
+                                <span class="tag">Depolarisasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flutter Integration Section -->
+    <section id="flutter" class="section flutter-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i data-lucide="smartphone"></i> Flutter Integration</span>
+                <h2 class="section-title">TEMGUARD <br><span class="text-accent">Mobile App Preview</span></h2>
+                <p class="section-desc">Preview tampilan aplikasi mobile TEMGUARD yang dibangun dengan Flutter
+                    framework.</p>
+            </div>
+
+            <div class="flutter-preview">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen" id="flutter-screen">
+                            <!-- Flutter-style App UI -->
+                            <div class="flutter-app">
+                                <div class="flutter-appbar">
+                                    <i data-lucide="menu"></i>
+                                    <span>TEMGUARD</span>
+                                    <i data-lucide="bell"></i>
+                                </div>
+                                <div class="flutter-body">
+                                    <div class="flutter-card flutter-temp-card">
+                                        <div class="flutter-temp-circle">
+                                            <svg viewBox="0 0 100 100">
+                                                <circle cx="50" cy="50" r="45" fill="none"
+                                                    stroke="rgba(255,255,255,0.1)" stroke-width="6" />
+                                                <circle cx="50" cy="50" r="45" fill="none" stroke="#4CAF50"
+                                                    stroke-width="6" stroke-dasharray="283" stroke-dashoffset="70"
+                                                    stroke-linecap="round" transform="rotate(-90 50 50)" />
+                                            </svg>
+                                            <div class="flutter-temp-value">4°C</div>
+                                        </div>
+                                        <div class="flutter-temp-label">Suhu Saat Ini</div>
+                                        <div class="flutter-status good">● Optimal</div>
+                                    </div>
+                                    <div class="flutter-card">
+                                        <div class="flutter-list-item">
+                                            <div class="fli-icon">📅</div>
+                                            <div class="fli-text">
+                                                <span class="fli-title">Kadaluwarsa</span>
+                                                <span class="fli-sub">180 hari tersisa</span>
+                                            </div>
+                                            <i data-lucide="chevron-right"></i>
+                                        </div>
+                                        <div class="flutter-list-item">
+                                            <div class="fli-icon">🛡️</div>
+                                            <div class="fli-text">
+                                                <span class="fli-title">Efektivitas</span>
+                                                <span class="fli-sub">99.7% aktif</span>
+                                            </div>
+                                            <i data-lucide="chevron-right"></i>
+                                        </div>
+                                        <div class="flutter-list-item">
+                                            <div class="fli-icon">🔬</div>
+                                            <div class="fli-text">
+                                                <span class="fli-title">Mekanisme</span>
+                                                <span class="fli-sub">5 jalur aksi</span>
+                                            </div>
+                                            <i data-lucide="chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flutter-navbar">
+                                    <div class="flutter-nav-item active">
+                                        <i data-lucide="home"></i>
+                                        <span>Home</span>
+                                    </div>
+                                    <div class="flutter-nav-item">
+                                        <i data-lucide="microscope"></i>
+                                        <span>Data</span>
+                                    </div>
+                                    <div class="flutter-nav-item">
+                                        <i data-lucide="thermometer"></i>
+                                        <span>Suhu</span>
+                                    </div>
+                                    <div class="flutter-nav-item">
+                                        <i data-lucide="settings"></i>
+                                        <span>Setting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flutter-features">
+                    <h3>Fitur Aplikasi TEMGUARD</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-check"><i data-lucide="check"></i></div>
+                            <div>
+                                <h4>Real-time Temperature Monitoring</h4>
+                                <p>Monitor suhu penyimpanan secara real-time dengan notifikasi peringatan otomatis.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check"><i data-lucide="check"></i></div>
+                            <div>
+                                <h4>Expiry Date Tracker</h4>
+                                <p>Pelacakan tanggal kadaluwarsa otomatis dengan pengingat sebelum masa simpan habis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check"><i data-lucide="check"></i></div>
+                            <div>
+                                <h4>Biofilm Analysis Dashboard</h4>
+                                <p>Dashboard analisis biofilm interaktif dengan visualisasi data hasil pengujian.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check"><i data-lucide="check"></i></div>
+                            <div>
+                                <h4>Cross-Platform (iOS & Android)</h4>
+                                <p>Dibangun dengan Flutter framework — berjalan native di iOS dan Android.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flutter-tech-stack">
+                        <span class="tech-badge">Flutter 3.x</span>
+                        <span class="tech-badge">Dart</span>
+                        <span class="tech-badge">Material Design 3</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">BLoC Pattern</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 20 C12 14, 20 8, 20 20 S28 26, 28 20" stroke="currentColor"
+                                    stroke-width="2" fill="none" />
+                                <circle cx="20" cy="20" r="4" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <span>TEMGUARD</span>
+                    </div>
+                    <p>Platform informasi ilmiah tentang mekanisme Xanthorrhizol dalam melumpuhkan biofilm bakteri.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="#mechanism">Mekanisme Aksi</a>
+                    <a href="#biofilm">Simulasi Biofilm</a>
+                    <a href="#storage">Panduan Penyimpanan</a>
+                    <a href="#expiry">Kadaluwarsa</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Sumber Data</h4>
+                    <a href="#">PubMed / NIH</a>
+                    <a href="#">ResearchGate</a>
+                    <a href="#">Frontiers in Microbiology</a>
+                    <a href="#">IntechOpen</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Teknologi</h4>
+                    <a href="#">HTML5 / CSS3</a>
+                    <a href="#">JavaScript ES6+</a>
+                    <a href="#">Flutter / Dart</a>
+                    <a href="#">Canvas API</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TEMGUARD. Xanthorrhizol Biofilm Defense System. Seluruh informasi berbasis bukti ilmiah.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
